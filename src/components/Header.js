@@ -1,65 +1,80 @@
+// components/Header.js
 import Link from "next/link";
 import ThemeSelect from "./ThemeSelect";
+import { FaHome, FaShoppingCart, FaInstagram, FaFacebook, FaTwitter, FaTiktok, FaChevronDown } from 'react-icons/fa';
 
 function Header() {
     return (
-
-        <div className="navbar bg-base-500 shadow-sm">
-
-            <div className="flex-1">
-                <Link href="/" className="btn btn-ghost text-xl">Inicio</Link>
-                <ThemeSelect />
+        <>
+            {/* Header superior con redes sociales */}
+            <div className="bg-primary text-primary-content py-2 px-4">
+                <div className="container mx-auto flex justify-between items-center">
+                    <div className="flex gap-4">
+                        <a href="#" className="hover:text-secondary transition-colors">
+                            <FaInstagram className="w-4 h-4" />
+                        </a>
+                        <a href="#" className="hover:text-secondary transition-colors">
+                            <FaFacebook className="w-4 h-4" />
+                        </a>
+                        <a href="#" className="hover:text-secondary transition-colors">
+                            <FaTwitter className="w-4 h-4" />
+                        </a>
+                        <a href="#" className="hover:text-secondary transition-colors">
+                            <FaTiktok className="w-4 h-4" />
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div className="flex-none pr-20">
-                <ul className="menu menu-horizontal px-1">
-                    <li>
-                        <Link href="/Productos">Productos</Link>
-                    </li>
-                    <li>
-                        <Link href="/Carrito">Carrito</Link>
-                    </li>
 
-
-                    <li>
-                        <div className="dropdown dropdown-end">
-                            <div tabIndex={0} role="button">Información</div>
-                            <ul
-                                tabIndex={0}
-                                className="menu dropdown-content bg-base-200 rounded-box z-1 mt-4 w-52 p-2 shadow-sm">
-                                <li>
-                                    <Link href="/SobreNosotros">Sobre nosostros</Link>
-                                </li>
-                                <li>
-                                    <Link href="/Contacto">Contacto</Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-
-
-                    <div className="drawer">
-                        <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-                        <div className="drawer-content fixed top-0 right-0 z-10">
-                            {/* Page content here */}
-                            <label htmlFor="my-drawer" className=" btn btn-primary drawer-button size-15 rounded-full">Drawer</label>
-                        </div>
-                        <div className="drawer-side z-10">
-                            <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
-                            <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
-                                {/* Sidebar content here */}
-                                <li><Link href="/pagina1">Pagina 1</Link></li>
-                                <li><Link href="/pagina2">Pagina 2</Link></li>
-                            </ul>
-                        </div>
+            <div className="navbar bg-base-100 shadow-lg sticky top-0 z-50">
+                <div className="container mx-auto">
+                    <div className="flex-1">
+                        <Link href="/" className="btn btn-ghost text-xl">
+                            <FaHome className="w-5 h-5" />
+                            Inicio
+                        </Link>
+                        <ThemeSelect />
                     </div>
 
+                    <div className="flex-none">
+                        <ul className="menu menu-horizontal gap-2 px-1 font-medium">
+                            {/* Productos */}
+                            <li>
+                                <Link href="/Productos" className="hover:text-primary">
+                                    Productos
+                                </Link>
+                            </li>
+                            
+                            {/* Carrito con icono */}
+                            <li>
+                                <Link href="/Carrito" className="flex items-center gap-1 hover:text-primary">
+                                    <FaShoppingCart className="w-4 h-4" />
+                                    Carrito
+                                </Link>
+                            </li>
 
-                </ul>
+                          
+                            <li>
+                                <div className="dropdown dropdown-hover dropdown-end">
+                                    <div tabIndex={0} role="button" className="flex items-center gap-1 hover:text-primary">
+                                        Información
+                                        <FaChevronDown className="w-3 h-3" />
+                                    </div>
+                                    <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-50 mt-4 w-52 p-2 shadow-lg border">
+                                        <li>
+                                            <Link href="/SobreNosotros">Sobre nosotros</Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/Contacto">Contacto</Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-
-
+        </>
     );
 }
 
