@@ -1,173 +1,149 @@
 // app/page.js
 import Link from "next/link";
 import AutoCarousel from "@/components/AutoCarousel";
-import CountDown from "@/components/CountDown";
-import RadialProgress from "@/components/RadialProgress";
+
 
 export default function Home() {
   return (
-    <section className="space-y-6">
-      {/* Sección de presentación - Texto a la izquierda, imagen a la derecha */}
-      <div className="hero min-h-[60vh] bg-gradient-to-br from-primary to-secondary px-4">
-        <div className="hero-content flex-col lg:flex-row text-center lg:text-left w-full max-w-6xl">
-          {/* Texto de presentación - Ahora a la izquierda */}
-          <div className="flex-1 max-w-2xl text-primary-content">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">⚽ FUTBOL STORE</h1>
-            <p className="text-lg md:text-xl mb-4 leading-relaxed">
+    <section className="space-y-8">
+      {/* Sección de presentación - MÁS A LA IZQUIERDA */}
+      <div className="hero min-h-[70vh] bg-gradient-to-br from-primary to-secondary">
+        <div className="hero-content flex-col lg:flex-row text-center lg:text-left w-full max-w-7xl lg:justify-start">
+          {/* Texto de presentación - MÁS A LA IZQUIERDA */}
+          <div className="flex-1 max-w-2xl lg:mr-8">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary-content">
+              ⚽ FUTBOL STORE
+            </h1>
+            <p className="text-lg md:text-xl mb-6 leading-relaxed text-primary-content opacity-90">
               Tu destino definitivo para todo lo relacionado con el fútbol. Desde las últimas equipaciones 
               de tus equipos favoritos hasta el calzado más avanzado, tenemos todo lo que necesitas 
               para vivir tu pasión por el deporte rey.
             </p>
-            <div className="space-y-2 mb-6">
-              <div className="flex items-center gap-2">
-                <span className="text-xl">✅</span>
-                <span>Equipaciones oficiales de LaLiga, Premier League y más</span>
+            <div className="space-y-3 mb-8">
+              <div className="flex items-center gap-3 text-primary-content">
+                <span className="text-2xl">✅</span>
+                <span className="text-lg">Equipaciones oficiales de LaLiga, Premier League y más</span>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="text-xl">✅</span>
-                <span>Botas de fútbol de las mejores marcas</span>
+              <div className="flex items-center gap-3 text-primary-content">
+                <span className="text-2xl">✅</span>
+                <span className="text-lg">Botas de fútbol de las mejores marcas</span>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="text-xl">✅</span>
-                <span>Accesorios y material deportivo de calidad</span>
+              <div className="flex items-center gap-3 text-primary-content">
+                <span className="text-2xl">✅</span>
+                <span className="text-lg">Accesorios y material deportivo de calidad</span>
               </div>
             </div>
-            <div className="flex gap-3 justify-center lg:justify-start flex-wrap">
-              <Link href="/Productos" className="btn btn-accent btn-md md:btn-lg">
-                Ver Productos
-              </Link>
-              <Link href="/SobreNosotros" className="btn btn-outline btn-md md:btn-lg text-primary-content border-primary-content hover:bg-primary-content hover:text-primary">
-                Conócenos
+            <div className="flex gap-4 justify-center lg:justify-start flex-wrap">
+              <Link href="/Productos" className="btn btn-accent btn-lg shadow-lg">
+                🛒 Ver Productos
               </Link>
             </div>
           </div>
-          {/* Imagen decorativa - Ahora a la derecha */}
-          <div className="flex-1 max-w-md">
-            <img 
-              src="/tienda-futbol.jpg" 
-              alt="Fútbol Store" 
-              className="rounded-lg shadow-2xl"
-            />
+        </div>
+      </div>
+
+      {/* Sección de características */}
+      <div className="py-12 bg-base-100">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">¿Por qué elegirnos?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="card bg-base-200 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="card-body items-center text-center">
+                <span className="text-4xl mb-4">🚚</span>
+                <h3 className="card-title">Envío Rápido</h3>
+                <p>Recibe tu pedido en 24-48 horas</p>
+              </div>
+            </div>
+            <div className="card bg-base-200 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="card-body items-center text-center">
+                <span className="text-4xl mb-4">🛡️</span>
+                <h3 className="card-title">Calidad Garantizada</h3>
+                <p>Productos 100% originales</p>
+              </div>
+            </div>
+            <div className="card bg-base-200 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="card-body items-center text-center">
+                <span className="text-4xl mb-4">📞</span>
+                <h3 className="card-title">Soporte 24 horas</h3>
+                <p>Estamos aquí para ayudarte</p>
+              </div>
+            </div>
+            <div className="card bg-base-200 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="card-body items-center text-center">
+                <span className="text-4xl mb-4">🏆</span>
+                <h3 className="card-title">Mejor Precio</h3>
+                <p>Garantía de mejor precio</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Carrusel de imágenes */}
-      <div className="px-4">
+      <div className="container mx-auto px-4">
         <AutoCarousel />
       </div>
 
-      {/* Sección de Categorías */}
-      <div className="px-4 py-8">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">Categorías</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Categoría 1 */}
-            <Link href="/Productos?categoria=equipaciones" className="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+      {/* Sección de categorías CON FOTOS REALES */}
+      <div className="py-12 bg-base-200">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Nuestras Categorías</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Equipaciones - CON FOTO */}
+            <Link href="/Productos?categoria=equipaciones" className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2">
               <figure className="px-4 pt-4">
-                <img src="/equipaciones.jpg" alt="Equipaciones" className="rounded-xl h-48 w-full object-cover" />
+                <img 
+                  src="/imagen_equipacion.jpg" 
+                  alt="Equipaciones de fútbol" 
+                  className="rounded-xl h-48 w-full object-cover"
+                />
               </figure>
               <div className="card-body items-center text-center">
-                <h3 className="card-title">Equipaciones</h3>
-                <p>Las últimas equipaciones de tus equipos favoritos</p>
+                <h3 className="card-title text-2xl">Equipaciones</h3>
+                <p className="text-base-content/70">Las últimas equipaciones oficiales</p>
+                <div className="card-actions">
+                  <button className="btn btn-primary">Explorar</button>
+                </div>
               </div>
             </Link>
-            {/* Categoría 2 */}
-            <Link href="/Productos?categoria=botas" className="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+            
+            {/* Botas - CON FOTO */}
+            <Link href="/Productos?categoria=botas" className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2">
               <figure className="px-4 pt-4">
-                <img src="/botas.jpg" alt="Botas" className="rounded-xl h-48 w-full object-cover" />
+                <img 
+                  src="/imagen_botas.png"  
+                  alt="Botas de fútbol" 
+                  className="rounded-xl h-48 w-full object-cover"
+                />
               </figure>
               <div className="card-body items-center text-center">
-                <h3 className="card-title">Botas</h3>
-                <p>Encuentra las botas perfectas para el campo</p>
+                <h3 className="card-title text-2xl">Botas</h3>
+                <p className="text-base-content/70">El mejor calzado deportivo</p>
+                <div className="card-actions">
+                  <button className="btn btn-primary">Explorar</button>
+                </div>
               </div>
             </Link>
-            {/* Categoría 3 */}
-            <Link href="/Productos?categoria=accesorios" className="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+            
+            {/* Accesorios - CON FOTO */}
+            <Link href="/Productos?categoria=accesorios" className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2">
               <figure className="px-4 pt-4">
-                <img src="/accesorios.jpg" alt="Accesorios" className="rounded-xl h-48 w-full object-cover" />
+                <img 
+                  src="/imagen_accesorios.jpg"  
+                  alt="Accesorios de fútbol" 
+                  className="rounded-xl h-48 w-full object-cover"
+                />
               </figure>
               <div className="card-body items-center text-center">
-                <h3 className="card-title">Accesorios</h3>
-                <p>Todo lo que necesitas para complementar tu equipamiento</p>
+                <h3 className="card-title text-2xl">Accesorios</h3>
+                <p className="text-base-content/70">Completa tu equipamiento</p>
+                <div className="card-actions">
+                  <button className="btn btn-primary">Explorar</button>
+                </div>
               </div>
             </Link>
           </div>
         </div>
-      </div>
-
-      {/* Sección de Productos Destacados */}
-      <div className="px-4 py-8 bg-base-200">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">Productos Destacados</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Producto 1 */}
-            <div className="card bg-base-100 shadow-xl">
-              <figure className="px-4 pt-4">
-                <img src="/producto1.jpg" alt="Producto 1" className="rounded-xl h-48 w-full object-cover" />
-              </figure>
-              <div className="card-body">
-                <h3 className="card-title">Camiseta Real Madrid</h3>
-                <p>Equipación local 2023/2024</p>
-                <div className="card-actions justify-between items-center mt-4">
-                  <span className="text-2xl font-bold">89,99€</span>
-                  <button className="btn btn-primary">Añadir al carrito</button>
-                </div>
-              </div>
-            </div>
-            {/* Producto 2 */}
-            <div className="card bg-base-100 shadow-xl">
-              <figure className="px-4 pt-4">
-                <img src="/producto2.jpg" alt="Producto 2" className="rounded-xl h-48 w-full object-cover" />
-              </figure>
-              <div className="card-body">
-                <h3 className="card-title">Botas Nike Mercurial</h3>
-                <p>Máxima velocidad y control</p>
-                <div className="card-actions justify-between items-center mt-4">
-                  <span className="text-2xl font-bold">129,99€</span>
-                  <button className="btn btn-primary">Añadir al carrito</button>
-                </div>
-              </div>
-            </div>
-            {/* Producto 3 */}
-            <div className="card bg-base-100 shadow-xl">
-              <figure className="px-4 pt-4">
-                <img src="/producto3.jpg" alt="Producto 3" className="rounded-xl h-48 w-full object-cover" />
-              </figure>
-              <div className="card-body">
-                <h3 className="card-title">Balón Adidas</h3>
-                <p>Balón oficial de la Champions League</p>
-                <div className="card-actions justify-between items-center mt-4">
-                  <span className="text-2xl font-bold">49,99€</span>
-                  <button className="btn btn-primary">Añadir al carrito</button>
-                </div>
-              </div>
-            </div>
-            {/* Producto 4 */}
-            <div className="card bg-base-100 shadow-xl">
-              <figure className="px-4 pt-4">
-                <img src="/producto4.jpg" alt="Producto 4" className="rounded-xl h-48 w-full object-cover" />
-              </figure>
-              <div className="card-body">
-                <h3 className="card-title">Guantes Portero</h3>
-                <p>Máxima adherencia y protección</p>
-                <div className="card-actions justify-between items-center mt-4">
-                  <span className="text-2xl font-bold">45,99€</span>
-                  <button className="btn btn-primary">Añadir al carrito</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="text-center mt-8">
-            <Link href="/Productos" className="btn btn-primary btn-lg">Ver todos los productos</Link>
-          </div>
-        </div>
-      </div>
-
-      {/* Resto de contenido (CountDown, RadialProgress, etc.) */}
-      <div className="px-4 space-y-6">
-        <CountDown />
-        <RadialProgress />
       </div>
     </section>
   );
