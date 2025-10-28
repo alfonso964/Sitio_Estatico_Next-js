@@ -1,4 +1,4 @@
-// components/ContactForm.js
+
 export default function FormularioContacto() {
   return (
     <div className="card bg-base-100 shadow-xl">
@@ -6,7 +6,7 @@ export default function FormularioContacto() {
         <h2 className="card-title text-2xl mb-6">📩 Envíanos un mensaje</h2>
         <form className="space-y-4">
           <div className="form-control">
-            <label className="label mb-3">
+            <label className="label">
               <span className="label-text">Nombre completo</span>
             </label>
             <input 
@@ -18,7 +18,7 @@ export default function FormularioContacto() {
           </div>
           
           <div className="form-control">
-            <label className="label mb-3">
+            <label className="label">
               <span className="label-text">Email</span>
             </label>
             <input 
@@ -30,7 +30,7 @@ export default function FormularioContacto() {
           </div>
           
           <div className="form-control">
-            <label className="label mb-3">
+            <label className="label">
               <span className="label-text">Asunto</span>
             </label>
             <select className="select select-bordered">
@@ -44,7 +44,7 @@ export default function FormularioContacto() {
           </div>
           
           <div className="form-control">
-            <label className="label mb-3">
+            <label className="label">
               <span className="label-text">Mensaje</span>
             </label>
             <textarea 

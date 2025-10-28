@@ -6,10 +6,8 @@ import AutoCarousel from "@/components/AutoCarousel";
 export default function Home() {
   return (
     <section className="space-y-8">
-      {/* Sección de presentación - MÁS A LA IZQUIERDA */}
       <div className="hero min-h-[70vh] bg-gradient-to-br from-primary to-secondary">
         <div className="hero-content flex-col lg:flex-row text-center lg:text-left w-full max-w-7xl lg:justify-start">
-          {/* Texto de presentación - MÁS A LA IZQUIERDA */}
           <div className="flex-1 max-w-2xl lg:mr-8">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary-content">
               ⚽ FUTBOL STORE
@@ -42,7 +40,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Sección de características */}
+  
       <div className="py-12 bg-base-100">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">¿Por qué elegirnos?</h2>

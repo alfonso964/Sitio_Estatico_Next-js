@@ -1,32 +1,68 @@
-// app/Contacto/page.js
-import Hero from "@/components/Hero";
-import FormularioContacto from "@/components/FormularioContacto";
-import ContactInfo from "@/components/ContactInfo";
-
+import Hero from '../../components/Hero';
+import FormularioContacto from '../../components/FormularioContacto';
 
 export default function Contacto() {
   return (
-    <section className="space-y-12 py-8">
-      {/* Hero Section usando el componente */}
+    <div>
       <Hero 
-        title="Contacto"
-        subtitle="Estamos aquí para ayudarte. ¡No dudes en ponerte en contacto con nosotros!"
-        bgGradient="from-green-500 to-blue-600"
+        title="Contáctanos"
+        subtitle="Estamos aquí para ayudarte. Escríbenos y te responderemos a la brevedad"
+        imageUrl="/contact-hero.jpg"
+        showButton={false}
       />
-
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Columna izquierda - Información de contacto */}
-          <div className="lg:col-span-1">
-            <ContactInfo />
-          </div>
-
-          {/* Columna central - Formulario */}
-          <div className="lg:col-span-2">
-            <FormularioContacto />
+      
+      <section className="py-16 bg-base-100">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Formulario */}
+            <div>
+              <FormularioContacto />
+            </div>
+            
+            {/* Información de contacto */}
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-2xl font-bold mb-6">Información de Contacto</h2>
+                
+                <div className="space-y-4">
+                  <div className="flex items-start">
+                    <div className="text-2xl mr-4">📍</div>
+                    <div>
+                      <h3 className="font-semibold">Dirección</h3>
+                      <p>Av. Gran Vía,35<br />Madrid, España</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="text-2xl mr-4">📞</div>
+                    <div>
+                      <h3 className="font-semibold">Teléfono</h3>
+                      <p>+34 905-689-410</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="text-2xl mr-4">✉️</div>
+                    <div>
+                      <h3 className="font-semibold">Email</h3>
+                      <p>info@mitienda.com</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="text-2xl mr-4">🕒</div>
+                    <div>
+                      <h3 className="font-semibold">Horario de Atención</h3>
+                      <p>Lunes a Viernes: 9:00 - 18:00<br />
+                         Sábados: 10:00 - 14:00</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }

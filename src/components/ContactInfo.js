@@ -1,4 +1,4 @@
-// components/ContactInfo.js
+
 export default function ContactInfo() {
   return (
     <div className="space-y-6">

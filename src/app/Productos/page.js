@@ -1,21 +1,16 @@
-import MyDatePicker from "@/components/MyDatePicker";
+import Hero from '../../components/Hero';
+import ProductList from '../../components/ProductList';
 
-
-function Page1() {
-    const fecha = new Date()
-    console.log(fecha.toISOString());
-
+export default function Productos() {
     return (
-        <>
-            <p>{fecha.toISOString()}</p>
-            <MyDatePicker />
-            <input type="date"
-                defaultValue="2024-07-22"
-                min="2025-01-01"
-                max="2025-12-31" />
-            <input type="datetime-local" />
-        </>
+        <div>
+            <Hero 
+                title="Nuestros Productos"
+                subtitle="Descubre la mejor equipación y material deportivo"
+                imageUrl="/productos-hero.jpg"
+                showButton={false}
+            />
+            <ProductList />
+        </div>
     );
 }
-
-export default Page1;

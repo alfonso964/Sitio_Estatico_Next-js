@@ -1,4 +1,3 @@
-// app/SobreNosotros/page.js
 import Link from "next/link";
 import Alert from "@/components/Alert";
 
