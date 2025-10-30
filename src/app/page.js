@@ -77,17 +77,17 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Carrusel de imágenes */}
+      
       <div className="container mx-auto px-4">
         <AutoCarousel />
       </div>
 
-      {/* Sección de categorías CON FOTOS REALES */}
+
       <div className="py-12 bg-base-200">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Nuestras Categorías</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Equipaciones - CON FOTO */}
+
             <Link href="/Productos?categoria=equipaciones" className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2">
               <figure className="px-4 pt-4">
                 <img 
@@ -105,7 +105,7 @@ export default function Home() {
               </div>
             </Link>
             
-            {/* Botas - CON FOTO */}
+            
             <Link href="/Productos?categoria=botas" className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2">
               <figure className="px-4 pt-4">
                 <img 
@@ -123,7 +123,7 @@ export default function Home() {
               </div>
             </Link>
             
-            {/* Accesorios - CON FOTO */}
+          
             <Link href="/Productos?categoria=accesorios" className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2">
               <figure className="px-4 pt-4">
                 <img 
