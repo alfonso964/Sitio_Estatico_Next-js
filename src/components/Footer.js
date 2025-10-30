@@ -5,9 +5,10 @@ export default function Footer() {
   return (
     <footer className="footer bg-neutral text-neutral-content mt-12">
       <div className="container mx-auto px-4 py-8">
-        {/* Primera fila: Tres columnas con justify-between */}
-        <div className="flex flex-col md:flex-row justify-between items-start gap-75 mb-6">
-          {/* Columna izquierda: Navegación */}
+       
+        <div className="flex flex-col md:flex-row justify-between items-start gap-100 mb-6">
+      
+
           <nav className="flex-1">
             <h6 className="footer-title text-lg opacity-100 mb-4">Navegación</h6>
             <div className="flex flex-col gap-2">
@@ -29,20 +30,21 @@ export default function Footer() {
             </div>
           </nav>
 
-          {/* Columna derecha: Imagen MÁS GRANDE */}
-          <div className="flex-1">
+         
+          <div className="flex-4 min-w-0"> 
             <h6 className="footer-title text-lg opacity-100 mb-4">Nuestra Tienda</h6>
             <div className="bg-base-300 p-2 rounded-lg">
               <img 
                 src="/mapa.png" 
                 alt="Nuestra tienda de fútbol" 
-                className="w-full h-48 md:h-56 object-cover rounded-lg shadow-lg"
+                className="w-full h-50 md:h-50 object-cover rounded-lg shadow-lg"
               />
+              
             </div>
           </div>
         </div>
 
-        {/* Segunda fila: Copyright y redes sociales */}
+        
         <div className="border-t border-base-300 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             {/* Copyright */}

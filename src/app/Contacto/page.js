@@ -29,7 +29,7 @@ export default function Contacto() {
                     <div className="text-2xl mr-4">📍</div>
                     <div>
                       <h3 className="font-semibold">Dirección</h3>
-                      <p>Av. Gran Vía,35<br />Madrid, España</p>
+                      <p>C/Bravo Murillo,30<br />Madrid, España</p>
                     </div>
                   </div>
                   

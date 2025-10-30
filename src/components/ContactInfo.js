@@ -28,7 +28,7 @@ export default function ContactInfo() {
               <div>
                 <h3 className="font-bold">Dirección</h3>
                 <p className="text-base-content/70">
-                  Calle del Fútbol, 123<br />
+                  Calle Bravo Murillo,30<br />
                   28000 Madrid, España
                 </p>
               </div>
@@ -48,7 +48,7 @@ export default function ContactInfo() {
         </div>
       </div>
 
-      {/* Mapa o información adicional */}
+      
       <div className="card bg-base-100 shadow-lg">
         <div className="card-body">
           <h3 className="card-title text-lg mb-3">🚗 ¿Cómo llegar?</h3>

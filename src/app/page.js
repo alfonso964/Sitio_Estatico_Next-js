@@ -1,4 +1,4 @@
-// app/page.js
+
 import Link from "next/link";
 import AutoCarousel from "@/components/AutoCarousel";
 
